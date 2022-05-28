@@ -82,6 +82,8 @@ public class MapActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == PERMISSIONS_FINE_LOCATION) {
+            //updateGPS();
+
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 updateGPS();
             }
@@ -114,10 +116,10 @@ public class MapActivity extends AppCompatActivity {
         longitudeData.setText(String.valueOf(location.getLongitude()));
         latitudeData.setText(String.valueOf(location.getLatitude()));
         if (location.hasAltitude()) {
-            longitudeData.setText(String.valueOf(location.getLongitude()));
+            altitudeData.setText(String.valueOf(location.getAltitude()));
         }
         else {
-            longitudeData.setText("NA");
+            altitudeData.setText("NA");
         }
     }
 }
