@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ICantC</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="altitude">Altitude</string>
+    <string name="alarm">Alarm</string>
 </resources>
