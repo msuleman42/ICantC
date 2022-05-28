@@ -6,11 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".journeyActivity">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="372dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/startJourneyParent"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:hint="hint"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="129dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="156dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/startJourneyChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Journey Start" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/endJourneyParent"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="289dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/endJourneyChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Journey End" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="656dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
