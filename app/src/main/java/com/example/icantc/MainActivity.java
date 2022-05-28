@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivityMap()
     {
-        Intent intent = new Intent(this, MapActivity.class);
+        Intent intent = new Intent(this, journeyActivity.class);
         startActivity(intent);
     }
 
