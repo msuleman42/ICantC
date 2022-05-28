@@ -14,7 +14,7 @@
         android:theme="@style/Theme.ICantC"
         tools:targetApi="31">
         <activity
-            android:name=".map"
+            android:name=".MapActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

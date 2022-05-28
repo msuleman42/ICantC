@@ -4,4 +4,5 @@
     <string name="latitude">Latitude</string>
     <string name="altitude">Altitude</string>
     <string name="alarm">Alarm</string>
+    <string name="newText">Home Page</string>
 </resources>

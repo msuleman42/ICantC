@@ -7,9 +7,10 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id = "@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOME PAGE"
+        android:text="@string/newText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +22,8 @@
         android:layout_height="wrap_content"
         android:text="To main page"
         tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="472dp" />
+        tools:layout_editor_absoluteY="472dp"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
