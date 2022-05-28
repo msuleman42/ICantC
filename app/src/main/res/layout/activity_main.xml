@@ -4,36 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#333333"
     tools:context=".MainActivity">
 
     <TextView
-        android:id = "@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/rollSafeInfo"
+        android:layout_width="320dp"
+        android:layout_height="264dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal|top"
         android:text="@string/newText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#FDF9ED"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/toMapButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/toMapButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="97dp"
-
-
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="240dp"
+        android:layout_width="163.92dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="115dp"
+        android:background="#00CF8B"
         android:text="@string/to_main_page"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#5D4037"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollSafeInfo" />
 
-
-        app:layout_constraintVertical_bias="1.05" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="295dp"
+        android:layout_height="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="39dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/policyStuff"
+        android:textColor="#FDF9ED"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toMapButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

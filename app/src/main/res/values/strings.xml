@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">ICantC</string>
+    <string name="app_name">RollSafe</string>
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
     <string name="altitude">Altitude</string>
     <string name="alarm">Alarm</string>
-    <string name="newText">Home Page</string>
+    <string name="newText">Roll safe helps make your journey safer. Add an Emergency contact, and input your journey before you leave. If you deviate from your journey and don\'t respond to the prompt, roll safe will activate an alarm on your phone and send your location to your emergency contact </string>
     <string name="confirm">Confirm</string>
-    <string name="to_main_page">To main page</string>
+    <string name="to_main_page">Continue</string>
+    <string name="policyStuff">By Clicking Continue you are Accepting out Terms and Conditions and Privacy Policy</string>
 </resources>
