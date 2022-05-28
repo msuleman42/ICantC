@@ -43,6 +43,8 @@ import java.util.List;
 
 public class journeyActivity extends AppCompatActivity implements OnMapReadyCallback {
 
+    TextView destinationData;
+
     private static final String TAG = journeyActivity.class.getSimpleName();
     private GoogleMap map;
     private CameraPosition cameraPosition;
@@ -90,6 +92,8 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
 
         Places.initialize(getApplicationContext(), BuildConfig.MAPS_API_KEY);
         placesClient = Places.createClient(this);
+
+        destinationData = findViewById(R.id.endJourneyChild);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -219,4 +223,6 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
         }
         updateLocationUI();
     }
+
+
 }
