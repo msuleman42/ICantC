@@ -4,63 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".journeyActivity">
+    tools:context=".journeyActivity"
+    android:background="#333333">
+
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="399dp"
         android:layout_height="449dp"
+        android:layout_marginTop="63dp"
         android:layout_weight="4"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endJourneyParent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/startJourneyParent"
-        android:layout_width="409dp"
+
+    <android.widget.Button
+        android:id="@+id/confDestinationButton"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:layout_weight="1"
+        android:background="@drawable/btnbgd"
+        android:text="Go"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/map" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/startJourneyChild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Journey Start" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/endJourneyParent"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startJourneyParent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/endJourneyChild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Journey End" />
-
-        <Button
-            android:id="@+id/confDestinationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
+    <android.widget.Button
         android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btnbgd"
         android:text="@string/confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        app:layout_constraintVertical_bias="0.807" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/startJourneyChild"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="81dp"
+        android:background="@drawable/inputbgd"
+        android:gravity="center_horizontal"
+        android:hint="Journey Start"
+        android:textColorHint="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/endJourneyChild"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/inputbgd"
+        android:gravity="center_horizontal"
+        android:hint="Journey End"
+        android:textColorHint="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startJourneyChild" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
