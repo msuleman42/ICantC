@@ -129,6 +129,7 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
             }
         });
 
+        // Location permission for map
         getLocationPermission();
         updateLocationUI();
         getDeviceLocation();
