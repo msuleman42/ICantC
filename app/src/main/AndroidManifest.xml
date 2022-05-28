@@ -18,6 +18,9 @@
         android:theme="@style/Theme.ICantC"
         tools:targetApi="31">
         <activity
+            android:name=".enterDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
 

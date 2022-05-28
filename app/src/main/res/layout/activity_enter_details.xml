@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".enterDetailsActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/enter_details"
+        android:textColor="#FDF9ED"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/yourName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/yourName"
+        android:layout_width="290dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="7dp"
+        android:background="#000000"
+        android:hint="@string/your_name"
+        android:textColorHint="#FDF9ED"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/contactName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/contactName"
+        android:layout_width="290dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="7dp"
+        android:background="#000000"
+        android:hint="@string/emergency_contact_name"
+        android:textColorHint="#FDF9ED"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/contactNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourName" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/contactNumber"
+        android:layout_width="290dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="35dp"
+        android:background="#000000"
+        android:hint="@string/emergency_contact_number"
+        android:textColorHint="#FDF9ED"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/startJourneyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactName" />
+
+    <Button
+        android:id="@+id/startJourneyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_journey"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
