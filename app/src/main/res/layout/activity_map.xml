@@ -14,7 +14,14 @@
         android:inputType="text"
         android:text="@string/longitude"
         tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="99dp" />
+        tools:layout_editor_absoluteY="99dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
 
     <TextView
         android:id="@+id/longitudeData"
@@ -22,7 +29,13 @@
         android:layout_height="wrap_content"
         android:text="0.5"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="169dp" />
+        tools:layout_editor_absoluteY="169dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/longitudeLabel"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <EditText
         android:id="@+id/latitudeLabel"
@@ -31,8 +44,14 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/latitude"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="210dp" />
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="206dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/longitudeData"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <TextView
         android:id="@+id/latitudeData"
@@ -40,7 +59,13 @@
         android:layout_height="wrap_content"
         android:text="0.5"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="281dp" />
+        tools:layout_editor_absoluteY="281dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/latitudeLabel"
+        app:layout_constraintBottom_toTopOf="@id/altitudeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <EditText
         android:id="@+id/altitudeLabel"
@@ -49,8 +74,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/altitude"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="325dp" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.387" />
 
     <TextView
         android:id="@+id/altitudeData"
@@ -58,7 +88,15 @@
         android:layout_height="wrap_content"
         android:text="0.5"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="397dp" />
+        tools:layout_editor_absoluteY="397dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/altitudeLabel"
+        app:layout_constraintBottom_toTopOf="@id/alarmButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.600"
+
+        />
 
     <Button
         android:id="@+id/alarmButton"
@@ -66,5 +104,13 @@
         android:layout_height="136dp"
         android:text="@string/alarm"
         tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="488dp" />
+        tools:layout_editor_absoluteY="488dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/altitudeData"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
