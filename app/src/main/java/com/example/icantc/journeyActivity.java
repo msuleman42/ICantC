@@ -9,6 +9,9 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.media.MediaPlayer;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -59,8 +62,8 @@ import org.json.JSONObject;
 
 public class journeyActivity extends AppCompatActivity implements OnMapReadyCallback, TaskLoadedCallback {
 
-    TextView destinationData;
-    Button confDestBtn;
+    TextView destinationData, originData;
+    Button confDestBtn, home, confBtn, alarmBtn;
 
     private static final String TAG = journeyActivity.class.getSimpleName();
     private GoogleMap map;
@@ -97,6 +100,9 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
     private static final String KEY_CAMERA_POSITION = "camera_position";
     private static final String KEY_LOCATION = "location";
 
+    private MediaPlayer mp;
+    boolean isPlaying;
+
     Polyline currentPolyline;
 
 
@@ -110,8 +116,13 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
         }
 
         setContentView(R.layout.activity_journey);
+        originData = findViewById(R.id.startJourneyChild);
         destinationData = findViewById(R.id.endJourneyChild);
         confDestBtn = findViewById(R.id.end);
+        home = findViewById(R.id.home);
+        confBtn = findViewById(R.id.confirmButton);
+        alarmBtn = findViewById(R.id.alarmButton);
+        alarmBtn.setVisibility(View.INVISIBLE);
 
         Places.initialize(getApplicationContext(), BuildConfig.MAPS_API_KEY);
         placesClient = Places.createClient(this);
@@ -182,6 +193,42 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
 
                 queue.add(request);
 
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp.stop();
+                finish();
+            }
+        });
+
+        confBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                originData.setVisibility(View.INVISIBLE);
+                destinationData.setVisibility(View.INVISIBLE);
+                confDestBtn.setVisibility(View.INVISIBLE);
+                confBtn.setVisibility(View.INVISIBLE);
+                alarmBtn.setVisibility(View.VISIBLE);
+            }
+        });
+        isPlaying = false;
+        Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        mp = MediaPlayer.create(getApplicationContext(), alarmSound);
+        alarmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isPlaying == true) {
+                    mp.stop();
+                    isPlaying = false;
+                }
+                else {
+                    mp.start();
+                    isPlaying = true;
+                }
+                Toast.makeText(journeyActivity.this, "CLICKED", Toast.LENGTH_SHORT).show();
             }
         });
     }

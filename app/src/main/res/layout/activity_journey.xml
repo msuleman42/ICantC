@@ -23,6 +23,25 @@
     />
 
     <android.widget.Button
+        android:id="@+id/alarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:background="@drawable/alertbtn"
+        android:fontFamily="@font/bebas_neue"
+        android:text="ALARM!"
+        android:textColor="#FDF9ED"
+        android:textSize="64sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <android.widget.Button
         android:id="@+id/confirmButton"
         android:layout_width="125dp"
         android:layout_height="48dp"
@@ -79,6 +98,7 @@
         android:hint="@string/endpoint_input"
         android:fontFamily="@font/oswald"
         android:textColorHint="#FDF9ED"
+        android:textColor="#FDF9ED"
         android:textSize="18sp"
         android:gravity="center"
     />
@@ -111,17 +131,17 @@
         app:srcCompat="@drawable/rsbwlogo"
     />
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <android.widget.Button
+        android:id="@+id/home"
         android:layout_width="45dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="25dp"
+        android:background="@drawable/homeiconwhite"
 
         android:contentDescription="@string/home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homeiconwhite"
     />
 
 

@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/font/oswald.xml" value="0.2625" />
-        <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/layout/activity_journey.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/layout/activity_journey.xml" value="0.2" />
         <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/layout/activity_map.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/munir/AndroidStudioProjects/ICantC/app/src/main/res/layout/alert.xml" value="0.14492753623188406" />
       </map>
     </option>
   </component>
