@@ -10,9 +10,12 @@ For this hackathon, due to the given time frame, we narrowed this challenge down
 ## Requirements
 
 Android Studio Chipmunk 2021.2.1, Android 9.0 (Pie), enable 'GooglePlayServices' in SDK Tools.
+
 Emulator: Pixel 3 XL API 28
-Need to put it your own apiKey:
-  In local.properties, under sdk.dir add: MAPS_API_KEY=YOURAPIKEY
+
+Need to put it your own apiKey. In local.properties, under sdk.dir add: MAPS_API_KEY=YOURAPIKEY
+
+
 
 
 https://user-images.githubusercontent.com/25137360/170866424-1cea88b3-9a6f-40f1-8868-6307297e13fb.mp4
