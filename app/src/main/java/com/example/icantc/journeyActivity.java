@@ -111,7 +111,7 @@ public class journeyActivity extends AppCompatActivity implements OnMapReadyCall
 
         setContentView(R.layout.activity_journey);
         destinationData = findViewById(R.id.endJourneyChild);
-        confDestBtn = findViewById(R.id.confDestinationButton);
+        confDestBtn = findViewById(R.id.end);
 
         Places.initialize(getApplicationContext(), BuildConfig.MAPS_API_KEY);
         placesClient = Places.createClient(this);
