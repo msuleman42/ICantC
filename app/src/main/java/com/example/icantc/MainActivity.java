@@ -9,9 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    // Making sure this works
-    // Can confirm this works, bran stark
-    // I am here, gossip girl
 
     private Button button;
 

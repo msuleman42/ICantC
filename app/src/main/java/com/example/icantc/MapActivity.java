@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.media.MediaPlayer;
@@ -52,16 +53,30 @@ public class MapActivity extends AppCompatActivity {
         alarmBtn = findViewById(R.id.alarmButton);
 
         locationRequest = LocationRequest.create()
-                .setInterval(1000 * UPDATE_INTERVAL)
-                .setFastestInterval(1000 * FAST_UPDATE_INTERVAL)
+                .setInterval( UPDATE_INTERVAL)
+                .setFastestInterval(FAST_UPDATE_INTERVAL)
                 .setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-
+        /*
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(@NonNull LocationResult locationResult) {
                 super.onLocationResult(locationResult);
                 Location location = locationResult.getLastLocation();
                 updateUI(location);
+            }
+        };*/
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                if (locationResult != null) {
+                    if (locationResult == null) {
+                        return;
+                    }
+                    //Showing the latitude, longitude and accuracy on the home screen.
+                    for (Location location : locationResult.getLocations()) {
+                        updateUI(location);
+                    }
+                }
             }
         };
 
@@ -82,7 +97,6 @@ public class MapActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == PERMISSIONS_FINE_LOCATION) {
-            //updateGPS();
 
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 updateGPS();
@@ -94,6 +108,7 @@ public class MapActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("MissingPermission")
     private void updateGPS() {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MapActivity.this);
@@ -113,7 +128,8 @@ public class MapActivity extends AppCompatActivity {
     }
 
     private void updateUI(Location location) {
-        longitudeData.setText(String.valueOf(location.getLongitude()));
+        Toast.makeText(MapActivity.this, String.valueOf(location.getLongitude()) + ", " + String.valueOf(location.getLatitude()), Toast.LENGTH_SHORT).show();
+        longitudeData.setText(longitudeData.getText().toString() + String.valueOf(location.getLongitude()));
         latitudeData.setText(String.valueOf(location.getLatitude()));
         if (location.hasAltitude()) {
             altitudeData.setText(String.valueOf(location.getAltitude()));
