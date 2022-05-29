@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+
+        <item>@font/bebas_neue</item>
+        <item>@font/oswald_extralight</item>
+        <item>@font/oswald_light</item>
+        <item>@font/oswald</item>
+        <item>@font/oswaldd</item>
+    </array>
+</resources>

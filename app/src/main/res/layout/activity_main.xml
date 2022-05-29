@@ -7,60 +7,86 @@
     android:background="#333333"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="229dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="91dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/rsbwlogo"
+        android:contentDescription="@string/logo"
+
+
+    />
+
     <TextView
         android:id="@+id/rollSafeInfo"
         android:layout_width="320dp"
         android:layout_height="264dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="165dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center_horizontal|top"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="46dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+
+        android:fontFamily="@font/oswald"
         android:text="@string/newText"
         android:textColor="#FDF9ED"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/toMapButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+    />
 
-    <Button
+    <android.widget.Button
         android:id="@+id/toMapButton"
         android:layout_width="163.92dp"
         android:layout_height="49dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="115dp"
-        android:background="#00CF8B"
-        android:text="@string/to_main_page"
-        android:textColor="#5D4037"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="100dp"
+
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rollSafeInfo" />
+
+        android:background="@drawable/btnbgd"
+        android:fontFamily="@font/bebas_neue"
+        android:text="@string/to_main_page"
+        android:textSize="28sp"
+        android:textColor="#333333"
+    />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="295dp"
+        android:layout_width="300dp"
         android:layout_height="26dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="39dp"
-        android:gravity="center_horizontal|top"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="24dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
         android:text="@string/policyStuff"
         android:textColor="#FDF9ED"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toMapButton" />
+        android:gravity="center"
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
