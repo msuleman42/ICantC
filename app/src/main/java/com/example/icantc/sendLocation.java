@@ -11,7 +11,7 @@ public class sendLocation {
     private String latitude;
 
     private static final String ACCOUNT_SID = "AC4be07569e18112715b6707ad4299ed57";
-    private static final String AUTH_TOKEN = "329a106eb4cd850ba4be669c93f7f374";
+    private static final String AUTH_TOKEN = BuildConfig.AUTH_TOKEN;
 
     public sendLocation(String longtitude, String latitude)
     {
