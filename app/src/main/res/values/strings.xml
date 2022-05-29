@@ -20,4 +20,11 @@
     <string name="edit_journey">Edit Journey</string>
     <string name="disarm">DISARM</string>
     <string name="user_info_input">Enter Your Details</string>
+    <string name="tagLine">Share your journey, Travel safe</string>
+    <string name="descrip">TODO</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="your_name">YOUR NAME</string>
+    <string name="emergency_contact_name">EMERGENCY CONTACT NAME</string>
+    <string name="emergency_contact_number">EMERGENCY CONTACT NUMBER</string>
+    <string name="start_journey">START JOURNEY</string>
 </resources>
