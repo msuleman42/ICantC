@@ -4,63 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#333333"
     tools:context=".journeyActivity">
 
-    <fragment
+
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="399dp"
-        android:layout_height="449dp"
+        android:layout_width="400dp"
+        android:layout_height="411dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="29dp"
         android:layout_weight="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/endJourneyParent" />
+    />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/startJourneyParent"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/startJourneyChild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Journey Start" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/endJourneyParent"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startJourneyParent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/endJourneyChild"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Journey End" />
-
-        <Button
-            android:id="@+id/confDestinationButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
+    <android.widget.Button
         android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="125dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="169dp"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map" />
+        app:layout_constraintTop_toBottomOf="@+id/endJourneyChild"
+
+        android:background="@drawable/btnbgd"
+        android:text="@string/confirm"
+        android:gravity="center"
+        android:fontFamily="@font/oswald"
+        android:textSize="26sp"
+    />
+
+    <TextView
+        android:id="@+id/startJourneyChild"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="102dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+
+        android:background="@drawable/inputbgd"
+        android:hint="@string/current_location"
+        android:fontFamily="@font/oswald"
+        android:textColorHint="#FDF9ED"
+        android:textSize="18sp"
+        android:gravity="center"
+
+   />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/endJourneyChild"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="102dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startJourneyChild"
+
+        android:background="@drawable/inputbgd"
+        android:hint="@string/endpoint_input"
+        android:fontFamily="@font/oswald"
+        android:textColorHint="#FDF9ED"
+        android:textSize="18sp"
+        android:gravity="center"
+    />
+
+    <ImageView
+        android:id="@+id/end"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/confirmButton"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:srcCompat="@drawable/nexticon"
+        android:contentDescription="@string/nexticon"
+    />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="229dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:contentDescription="@string/logo"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rsbwlogo"
+    />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="25dp"
+
+        android:contentDescription="@string/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homeiconwhite"
+    />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

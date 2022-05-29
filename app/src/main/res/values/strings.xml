@@ -8,4 +8,23 @@
     <string name="confirm">Confirm</string>
     <string name="to_main_page">Continue</string>
     <string name="policyStuff">By Clicking Continue you are Accepting out Terms and Conditions and Privacy Policy</string>
+    <string name="tagLine">Share your journey, Travel safe</string>
+    <string name="descrip">TODO</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="your_name">YOUR NAME</string>
+    <string name="emergency_contact_name">EMERGENCY CONTACT NAME</string>
+    <string name="emergency_contact_number">EMERGENCY CONTACT NUMBER</string>
+    <string name="start_journey">START JOURNEY</string>
+    <string name="journey_end">Journey End</string>
+    <string name="journey_start">Journey Start</string>
+    <string name="nexticon">nextIcon</string>
+    <string name="logo">Logo</string>
+    <string name="home">home</string>
+    <string name="alert_content">You have gone off your route. If you do not respond to this notification in 30 seconds your location will be sent to your listed emergency contact</string>
+    <string name="alert">ALERT!</string>
+    <string name="current_location">Current Location:</string>
+    <string name="endpoint_input">Enter Destination</string>
+    <string name="edit_journey">Edit Journey</string>
+    <string name="disarm">DISARM</string>
+    <string name="user_info_input">Enter Your Details</string>
 </resources>
