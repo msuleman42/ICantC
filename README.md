@@ -26,6 +26,10 @@ https://user-images.githubusercontent.com/25137360/170866424-1cea88b3-9a6f-40f1-
 ## Team
 
 Ria Rana (https://github.com/rbr21)
+
 Sarina Saqib (https://github.com/sarinasaqib)
+
 Silvester Stephens (https://github.com/1silvester)
+
 Munir Suleman (https://github.com/msuleman42)
+
